@@ -13,7 +13,10 @@ public class SetupTile : MonoBehaviour {
     public bool left = false, right = false, forward = false, back = false;
 
     void Start () {
-
+        left = false;
+        right = false;
+        forward = false;
+        back = false;
         //checks for colliders of other sidwalks to set the allowed walking directions
         //(**to do: check if there is a baking option to save the level an do it before)
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1.1f);
@@ -52,6 +55,7 @@ public class SetupTile : MonoBehaviour {
 
         //check the directions in console
         // Debug.Log(this.name + ": left: " + left + ", right: " + right + ", forward: " + forward + ", back: " + back );
+
     }
 	
 }
